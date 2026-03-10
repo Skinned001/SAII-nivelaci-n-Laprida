@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacción Dinámica</title>
+
+</head>
+<body class="estado-0">
+
+    <div class="container">
+        <h1>Mi Sitio Interactivo</h1>
+        
+        <input type="text" id="cajaTexto" placeholder="Escribe algo y presiona Enter...">
+
+        <button id="btnCambiarColor">Cambiar Colores</button>
+    </div>
+
+    <script>
+        const cajaTexto = document.getElementById('cajaTexto');
+        const btnColor = document.getElementById('btnCambiarColor');
+        const cuerpo = document.body;
+
+        cajaTexto.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const valor = cajaTexto.value;
+                if (valor.trim() !== "") {
+                    alert("Texto ingresado: " + valor);
+                } else {
+                    alert("La caja está vacía.");
+                }
+            }
+        });
+
+        let indiceEstado = 0;
+        const totalEstados = 3;
+
+        btnColor.addEventListener('click', () => {
+            cuerpo.classList.remove(`estado-${indiceEstado}`);
+            
+            indiceEstado = (indiceEstado + 1) % totalEstados;
+            
+            cuerpo.classList.add(`estado-${indiceEstado}`);
+        });
+    </script>
+</body>
+</html>
