@@ -1,7 +1,7 @@
 # SAII-nivelaci-n-Laprida
 
 IMPLEMENTACION 1
-Este trabajo se trata de crear una pagina web simple con intencion de repaso y practiaca de conceptos basicos.
+Este trabajo se trata de crear una pagina web simple con intencion de repaso y practica de conceptos basicos.
 En la version1, se trata de un archivo html trabajado solo con javascript y css.
 El objetivo es el de permitir escribir texto en un input y al presionar ENTER el texto se desplegara en un alert, 
 ademas de un boton que dejara cambiar los colores de la pagina.
